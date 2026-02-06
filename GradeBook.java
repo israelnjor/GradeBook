@@ -28,15 +28,20 @@ public class GradeBook {
   }
   public void executeGradeResult(double score) {
     Scanner input = new Scanner(System.in);
-    System.out.println("Enter your scores here ");
+    System.out.println("Enter your scores here: ");
     score = input.nextDouble();
 
-    validateScore(score);
+   //  validateScore(score) {
+      if (!validateScore(score)) {
+         System.out.println("Invalid input. Try again.");
+         return;
+      }
+    
     
     char grade = calculateLetterGrade(score);
 
     displayGradeMessage(grade);
-  }
+   }
 
   public static void main(String[] args) {
     GradeBook Israel = new GradeBook();
