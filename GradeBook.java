@@ -15,7 +15,7 @@ public class GradeBook {
     else return 'F';
   }
 
-  private void displayGradeMessage(grade) {
+  private void displayGradeMessage(char grade) {
     switch(grade) {
       case 'A': System.out.println("Grade: " + grade + "\nExcellent!"); return;
       case 'B': System.out.println("Grade: " + grade + "\nGood job!"); return;
@@ -33,13 +33,13 @@ public class GradeBook {
 
     validateScore(score);
     
-    Char grade = calculateLetterGrade(score);
+    char grade = calculateLetterGrade(score);
 
     displayGradeMessage(grade);
   }
 
   public static void main(String[] args) {
     GradeBook Israel = new GradeBook();
-    Israel.exercuteGradeResult(99);
+    Israel.executeGradeResult(99);
   }
 }
