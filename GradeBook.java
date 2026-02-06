@@ -1,8 +1,6 @@
 import java.util.Scanner;
 
-public class GradeBook {
-  grade = calculateLetterGrade(score);
-  
+public class GradeBook {  
 
   private boolean validateScore(double score) {
     return 0 <= score && score <= 100;
@@ -17,7 +15,7 @@ public class GradeBook {
     else return 'F';
   }
 
-  private displayGradeMessage(grade) {
+  private void displayGradeMessage(grade) {
     switch(grade) {
       case 'A': System.out.println("Grade: " + grade + "\nExcellent!"); return;
       case 'B': System.out.println("Grade: " + grade + "\nGood job!"); return;
@@ -41,7 +39,7 @@ public class GradeBook {
   }
 
   public static void main(String[] args) {
-    GradeBook Israel = new GradeBook;
+    GradeBook Israel = new GradeBook();
     Israel.exercuteGradeResult(99);
   }
 }
